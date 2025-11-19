@@ -1,65 +1,76 @@
-import Image from "next/image";
+import AboutSection from "./about/page";
+import ContactSection from "./contact/page";
+import QualificationSection from "./qualification/page";
+import ServicesSection from "./servicess/page";
+import SkillsSection from "./skills/page";
+import PortfolioSection from "./portfolio/page";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="home section" id="home">
+        <div className="home_container container grid">
+          <div className="home_content grid">
+            <div className="home_social">
+              <a href="https://www.linkedin.com/in/aayusha-shrestha-7b9957319" target="_blank" className="home_social-icon">
+                <i className="uil uil-linkedin-alt"></i>
+              </a>
+
+              <a href="https://instagram.com/" target="_blank" className="home_social-icon">
+                <i className="uil uil-instagram"></i>
+              </a>
+
+              <a href="https://github.com/Aayusha-s" target="_blank" className="home_social-icon">
+                <i className="uil uil-github-alt"></i>
+              </a>
+            </div>
+
+            <div className="home_img">
+              <svg className="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                <mask id="mask0" mask-type="alpha">
+                  <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                </mask>
+                <g mask="url(#mask0)">
+                  <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+
+                  <image className="home_blob-img" xlinkHref="/images/cropped.jpg" />
+                </g>
+              </svg>
+            </div>
+
+            <div className="home_data">
+              <h1 className="home_title">Hi, I'm Aayusha</h1>
+              <h3 className="home_subtitle">Backend Developer</h3>
+              <p className="home_description">High level experience in backend developemnt, producing quality work.</p>
+              <a href="#contact" className="button button--flex">
+                Contact Me <i className="uil uil-message button_icon"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* <div className="home_scroll">
+                    <a href="#about" className="home_scroll-button button--flex">
+                        <i className="uil uil-mouse-alt home_scroll-mouse"></i>
+                        <span className="home_scroll-name">Scroll Down</span>
+                        <i className="uil uil-arrow-down home_scroll-arrow"></i>
+
+                    </a>
+                </div>  */}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      <AboutSection />
+      <SkillsSection />
+      <QualificationSection />
+      <ServicesSection />
+      <PortfolioSection />
+      <ContactSection />
+    </>
+  )
 }
